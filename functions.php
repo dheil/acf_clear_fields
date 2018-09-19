@@ -1,5 +1,4 @@
-function delete_custom_field(){
-    var_dump(get_post_meta($_POST['post_id']));
+function delete_custom_field(){    
     $response->status = '';
     foreach( $_POST['keys'] as $key){
         $response->status .= $key.': '. delete_post_meta($_POST['post_id'], $key) .', ';
